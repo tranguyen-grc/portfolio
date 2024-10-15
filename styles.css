@@ -1,0 +1,389 @@
+:root {
+  /* variables */
+  --cg-black: rgb(30, 32, 32);
+  --cg-blue: rgb(57, 134, 130);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--cg-grey);
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Hind";
+}
+
+/* CSS for navigation */
+
+.h1, .h2, .h3 {
+  font-family: "IBM Plex Sans";
+}
+
+.p {
+  font-family: "Hind";
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 7%;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--cg-grey);
+  color: var(--cg-black);
+  padding: 0px 0px;
+
+  /* Debug border */
+  /* border: solid red; */
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 30px;
+  list-style: none;
+
+  /* Debug border */
+  /* border: solid blue; */
+}
+
+
+.navbar a {
+  color: var(--cg-black);
+  font-weight: 600;
+  margin: 0 12px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "IBM Plex Sans";
+}
+
+.navbar a:hover {
+  color: var(--cg-blue);
+}
+
+.navbar a:active {
+  color: var(--cg-blue);
+}
+
+.logo a {
+  font-family: "IBM Plex Sans";
+  margin-left: 40px;
+}
+
+.logo a:hover {
+  text-decoration: None;
+}
+
+main {
+  padding: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: "IBM Plex Sans";
+}
+
+/* CSS for portfolio grid */
+
+.project {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  margin: 1em 0 2em 0;
+  justify-content: center;
+
+  /* Debug border */
+  /* border: 2px solid blue; */
+}
+
+.project-image {
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  flex-basis: 50px;
+  flex-grow: 2;
+
+  /* Debug border */
+  /* border: 2px solid black; */
+}
+
+.project-details {
+  display: flex;
+  background-color: var(--cg-white);
+  width: 300px;
+  height: 500px;
+  flex-shrink: 1;
+  padding: 0 20px;
+  margin: 0px;
+  line-height: 1.5;
+  overflow: scroll;
+
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  /* Debug border */
+  /* border: 2px solid green; */
+}
+
+.project-details a {
+  color: var(--cg-black);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 35%;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: var(--cg-grey);
+}
+
+.project-details a:hover {
+  background-color: var(--cg-black);
+  color: var(--cg-grey);
+}
+
+.project-details {
+  font-weight: lighter;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* CSS for home page */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 100px;
+  max-width: 1000px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.about-image img {
+  max-width: 400px;
+  margin-right: 70px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CSS for resume page */
+
+.button {
+  color: var(--cg-black);
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 10%;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: var(--cg-grey);
+}
+
+.button:hover {
+  color: var(--cg-blue);
+  cursor: pointer;
+}
+
+.resume {
+  width: 50%;
+  background-color: var(--cg-white);
+  padding: 50px;
+  /* border-radius: 20px; */
+}
+
+.resume h2 {
+  font-family: "IBM Plex Sans";
+}
+
+.resume h3 {
+  font-family: "IBM Plex Sans";
+  font-weight: 600;
+}
+
+.resume-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-link-group {
+  flex-direction: row;
+  margin: 2px 0;
+}
+
+.resume-links a {
+  color: var(--cg-blue);
+  padding: 3px;
+}
+
+.resume ul {
+  padding-left: 20px; /* Create space for bullets */
+}
+
+.resume li {
+  margin: 5px 0; /* Adjust margin for spacing */
+  padding-left: 10px; /* Indent the second and subsequent lines */
+  list-style-position: outside; /* Ensure the bullet is outside the list item */
+}
+
+.section {
+  padding: 10px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.two-part {
+  display: flex; /* Enable flexbox to arrange items in a row */
+  justify-content: space-between; /* Adds space between the two sections */
+  align-items: flex-start; /* Aligns the items to the top */
+}
+
+.left-section{
+  width: 20%;
+}
+
+.right-section {
+  width: 70%;
+}
+
+.left-section p, .right-section p {
+  margin: 5px 0; /* Optional: Adjust margin for paragraphs */
+}
+
+
+
+/* CSS for footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cg-grey);
+  color: var(--cg-black);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+/* CSS for contact*/
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  background-color: #FFF;
+  padding: 32px;
+  /* border-radius: 16px; */
+  width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box; /* Ensure the padding is included in the form's width */
+}
+
+.form-group {
+  &.full {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #888;
+    font-size: 14px;
+    font-family: "Hind";
+  }
+}
+
+.form-element {
+  appearance: none;
+  outline: none;
+  border: none;
+
+  display: block;
+  width: 100%; /* Ensure input takes up the full width of the container */
+  max-width: 100%; /* Prevent overflow */
+  
+  box-sizing: border-box; /* Include padding in the width */
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #F3F3F3;
+  transition: 0.4s;
+
+  &:focus {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+  }
+}
+
+.submit-group {
+  grid-column: 1 / -1;
+  text-align: right;
+}
+
+input[type="submit"] {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+  padding: 12px 16px;
+  background-color: var(--cg-black);
+  border-radius: 8px;
+  color: var(--cg-white);
+  cursor: pointer;
+  transition: 0.4s;
+  font-family: "IBM Plex Sans";
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: var(--cg-blue);
+  }
+}
+
